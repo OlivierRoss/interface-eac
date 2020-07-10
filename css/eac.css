@@ -2,6 +2,7 @@
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
+  clear: both;
 }
 
 .date_1colonne label, .text_1colonne label, .num_1colonne label, .textarea_1colonne label, .num_deroulant_2colonnes label, .deroulant_1colonne label {
@@ -12,6 +13,7 @@
 }
 
 .date_1colonne input, .text_1colonne input, .num_1colonne input, .textarea_1colonne textarea {
+  height: max-content;
   min-width: 75%; 
 }
 
@@ -43,4 +45,15 @@
   width: 20%;
   min-width: 95px;
   padding-left: 10px;
+}
+
+.num_plusieurs_colonnes, .text_2colonnes {
+  display: inline-block;
+  float: right;
+  clear: initial;
+  width: calc(75% / 2);
+}
+
+.num_plusieurs_colonnes input, .text_2colonnes input {
+  width: 100%;
 }

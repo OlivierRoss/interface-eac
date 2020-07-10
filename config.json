@@ -95,6 +95,66 @@
             "Homme",
             "Femme"
           ]
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "marques_distinctives",
+          "nom": "Marques distinctives et tattouages"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "armes",
+          "nom": "Armes"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "affiliation",
+          "nom": "Affiliation",
+          "placeholder": "Ex: Motards, Mafia, Gang de rue"
+        },
+        {
+          "affichage": "textarea_1colonne",
+          "id": "autres_details",
+          "nom": "Autres détails importants"
+        },
+        {
+          "affichage": "sous_section",
+          "nom": "Adresse"
+        },
+        {
+          "affichage": "num_1colonne",
+          "id": "numero_porte",
+          "nom": "Numéro de porte"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "rue",
+          "nom": "Rue"
+        },
+        {
+          "affichage": "num_1colonne",
+          "id": "appartement",
+          "nom": "Numéro d'appartement"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "ville",
+          "nom": "Ville"
+        },
+        {
+          "affichage": "text_2colonnes",
+          "id": "telephone",
+          "nom": "Téléphone"
+        },
+        {
+          "affichage": "text_2colonnes",
+          "id": "cellulaire",
+          "nom": "Cellulaire"
+        },
+        {
+          "affichage": "textarea_1colonne",
+          "id": "international",
+          "nom": "Si le suspect est à l'extérieur du Canada, où et quand rentrera-t-il au pays?"
         }
       ]
     }

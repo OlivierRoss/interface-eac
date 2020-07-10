@@ -78,7 +78,7 @@
                   
                     <div class="question text_1colonne">
   <label for="victime">Victime du crime</label>
-  <input id="victime" name="victime" type="text">
+  <input id="victime" name="victime" type="text" placeholder="">
 </div>
 
                   
@@ -97,13 +97,13 @@
                   
                   <div class="question text_1colonne">
   <label for="nom_complet">Nom complet</label>
-  <input id="nom_complet" name="nom_complet" type="text">
+  <input id="nom_complet" name="nom_complet" type="text" placeholder="">
 </div>
 
                   
                   <div class="question text_1colonne">
   <label for="taille">Taille</label>
-  <input id="taille" name="taille" type="text">
+  <input id="taille" name="taille" type="text" placeholder="">
 </div>
 
                   
@@ -174,41 +174,77 @@
 </div>
 
                   
-                  <p>
-                  <label for="marques">Marques distinctives et tattouages</label>
-                  <input name="marques" id="marques" type="text">
-                  </p>
-                  <p>
-                  <label for="armes">Armes</label>
-                  <input name="armes" id="armes" type="text">
-                  </p>
-                  <p>
-                  <label for="affiliation">Affiliation</label>
-                  <input name="affiliation" id="affiliation" type="text" placeholder="Groupe armé, motards, mafia, etc.">
-                  </p>
-                  <p>
-                  <label for="autre">Autres détails importants</label>
-                  <textarea name="autre" id="autre"></textarea>
-                  </p>
+                  <div class="question text_1colonne">
+  <label for="marques_distinctives">Marques distinctives et tattouages</label>
+  <input id="marques_distinctives" name="marques_distinctives" type="text" placeholder="">
+</div>
 
-                  <h3>Adresse</h3>
-                  <p>
-                  <label for="adresse">Adresse complète</label>
-                  <input name="adresse" id="adresse" type="text">
-                  </p>
-                  <p>
-                  <label for="telephone">Téléphone</label>
-                  <input name="telephone" id="telephone" type="text">
-                  </p>
-                  <p>
-                  <label for="cellulaire">Cellulaire</label>
-                  <input name="cellulaire" id="cellulaire" type="text">
-                  </p>
-                  <p>
-                  <label for="international">Si le suspect est à l'extérieur du Canada, où et quand rentrera-t-il au pays?</label>
-                  <br>
-                  <textarea name="international" id="international"></textarea>
-                  </p>
+                  
+                  <div class="question text_1colonne">
+  <label for="armes">Armes</label>
+  <input id="armes" name="armes" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question text_1colonne">
+  <label for="affiliation">Affiliation</label>
+  <input id="affiliation" name="affiliation" type="text" placeholder="Ex: Motards, Mafia, Gang de rue">
+</div>
+
+                  
+                  <div class="question textarea_1colonne">
+  <label for="autres_details">Autres détails importants</label>
+  <textarea id="autres_details" name="autres_details"></textarea>
+</div>
+
+                  
+                  <div class="sous-section">
+  <h3>Adresse</h3>
+</div>
+
+                  
+                  <div class="question num_1colonne">
+  <label for="numero_porte">Numéro de porte</label>
+  <input id="numero_porte" name="numero_porte" type="number">
+</div>
+
+                  
+                  <div class="question text_1colonne">
+  <label for="rue">Rue</label>
+  <input id="rue" name="rue" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question num_1colonne">
+  <label for="appartement">Numéro d&#39;appartement</label>
+  <input id="appartement" name="appartement" type="number">
+</div>
+
+                  
+                  <div class="question text_1colonne">
+  <label for="ville">Ville</label>
+  <input id="ville" name="ville" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question text_2colonnes">
+  <label for="telephone">Téléphone</label>
+  <input id="telephone" name="telephone" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question text_2colonnes">
+  <label for="cellulaire">Cellulaire</label>
+  <input id="cellulaire" name="cellulaire" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question textarea_1colonne">
+  <label for="international">Si le suspect est à l&#39;extérieur du Canada, où et quand rentrera-t-il au pays?</label>
+  <textarea id="international" name="international"></textarea>
+</div>
+
+                  
                 </div>
               </div>
               <div class="c-tab">
