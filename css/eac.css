@@ -1,13 +1,5 @@
 .question {
   padding: 10px 0;
-}
-
-.date_1colonne, .text_1colonne, .textarea_1colonne {
-  display: flex;
-  justify-content: space-between;
-}
-
-.text_1colonne {
   display: flex;
   justify-content: space-between;
 }
@@ -20,6 +12,16 @@
 
 .date_1colonne input, .text_1colonne input, .textarea_1colonne textarea {
   width: 75%; 
+}
+
+.deroulant_1colonne select {
+  width: 75%;
+  height: 25px;
+  padding: 0 10px;
+}
+
+.question.deroulant_1colonne {
+  align-items: center;
 }
 
 .textarea_1colonne textarea {
