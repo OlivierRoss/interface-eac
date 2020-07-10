@@ -60,41 +60,16 @@
                   <% sections.crime.questions.forEach((question) => { %>
                     <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
                   <% }) %>
-                  <p>
-                  <label for="victime">Victime</label>
-                  <input name="victime" id="victime" type="text">
-                  </p>
-                  <p>
-                  <label for="description_crime">Description du crime</label>
-                  <textarea name="description_crime" id="description_crime"></textarea>
-                  </p>
                 </div>
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2>Suspect 1 <span style="float: right">+</span></h2>
-                  <p>Qui a commis le crime?</p>
-                  <h3>Description physique</h3>
+                  <h2><%= sections.suspects.nom %></h2>
+                  <p><%= sections.suspects.description %></p>
+                  <% sections.suspects.questions.forEach((question) => { %>
+                  <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+                  <% }) %>
                   <p>
-                  <label for="nom">Nom complet</label>
-                  <input name="nom" id="nom" type="text">
-                  </p>
-                  <p>
-                  <label for="poids">Poids</label>
-                  <input name="poids" id="poids" type="number">
-                  <select name="type_poids" id="type_poids">
-                    <option>Livres (lbs)</option>
-                    <option>Kilos (Kg)</option>
-                  </select>
-                  </p>
-                  <p>
-                  <label for="taille">Taille</label>
-                  <input name="taille" id="taille" type="text">
-                  <select name="type_taille" id="type_taille">
-                    <option>Pieds / pouces</option>
-                    <option>Metre)</option>
-                  </select>
-                  </p>
                   <p>
                   <label for="yeux">Couleur des yeux</label>
                   <select name="yeux" id="yeux">

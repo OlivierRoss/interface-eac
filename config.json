@@ -6,7 +6,7 @@
         {
           "affichage": "deroulant_1colonne",
           "id": "type_crime",
-          "nom": "Type de crime",
+          "nom": "Quel type de crime voulez-vous dénoncer?",
           "options": [
             "Drogues",
             "Voie de fait"
@@ -32,6 +32,31 @@
           "affichage": "textarea_1colonne",
           "id": "description_crime",
           "nom": "Description du crime"
+        }
+      ]
+    },
+    "suspects": {
+      "nom": "Suspects",
+      "description": "Qui a commis le crime?",
+      "questions": [
+        {
+          "affichage": "text_1colonne",
+          "id": "nom_complet",
+          "nom": "Nom complet"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "taille",
+          "nom": "Taille"
+        },
+        {
+          "affichage": "num_deroulant_2colonnes",
+          "id": "poids",
+          "nom": "Poids",
+          "options": [
+            "Livres (lbs)",
+            "Kilos (Kg)"
+          ]
         }
       ]
     }

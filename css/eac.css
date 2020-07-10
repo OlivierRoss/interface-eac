@@ -1,2 +1,28 @@
-#container-type-crime {
+.question {
+  padding: 10px 0;
 }
+
+.date_1colonne, .text_1colonne, .textarea_1colonne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_1colonne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date_1colonne label, .text_1colonne label, .textarea_1colonne label {
+  width: 25%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.date_1colonne input, .text_1colonne input, .textarea_1colonne textarea {
+  width: 75%; 
+}
+
+.textarea_1colonne textarea {
+  height: 100px;
+}
+

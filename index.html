@@ -24,8 +24,8 @@
       <form>
         <div class="o-container" id="container-type-crime">
           
-            <div class="question_text_1colonne">
-  <label for="type_crime">Type de crime</label>
+            <div class="question text_1colonne">
+  <label for="type_crime">Quel type de crime voulez-vous dénoncer?</label>
   <select id="type_crime" name="type_crime">
     
         <option value="drogues">Drogues</option>
@@ -68,59 +68,57 @@
                   <h2>Crime</h2>
                   <p>Donnez-nous de l&#39;information</p>
                   
-                    <div class="question_text_1colonne">
+                    <div class="question date_1colonne">
   <label for="date_crime">Date du crime</label>
   <input id="date_crime" name="date_crime" type="date">
 </div>
 
                   
-                    <div class="question_text_1colonne">
+                    <div class="question text_1colonne">
   <label for="victime">Victime du crime</label>
   <input id="victime" name="victime" type="text">
 </div>
 
                   
-                    <div class="question_text_1colonne">
+                    <div class="question textarea_1colonne">
   <label for="description_crime">Description du crime</label>
-  <input id="description_crime" name="description_crime" type="text">
+  <textarea id="description_crime" name="description_crime"></textarea>
 </div>
 
                   
-                  <p>
-                  <label for="victime">Victime</label>
-                  <input name="victime" id="victime" type="text">
-                  </p>
-                  <p>
-                  <label for="description_crime">Description du crime</label>
-                  <textarea name="description_crime" id="description_crime"></textarea>
-                  </p>
                 </div>
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2>Suspect 1 <span style="float: right">+</span></h2>
+                  <h2>Suspects</h2>
                   <p>Qui a commis le crime?</p>
-                  <h3>Description physique</h3>
+                  
+                  <div class="question text_1colonne">
+  <label for="nom_complet">Nom complet</label>
+  <input id="nom_complet" name="nom_complet" type="text">
+</div>
+
+                  
+                  <div class="question text_1colonne">
+  <label for="taille">Taille</label>
+  <input id="taille" name="taille" type="text">
+</div>
+
+                  
+                  <div class="question num_deroulant_2colonnes">
+  <label for="poids">Poids</label>
+  <input id="poids" name="poids" type="number">
+  <select id="poids-option" name="poids-option">
+    
+        <option value="livres (lbs)">Livres (lbs)</option>
+    
+        <option value="kilos (kg)">Kilos (Kg)</option>
+    
+  </select>
+</div>
+
+                  
                   <p>
-                  <label for="nom">Nom complet</label>
-                  <input name="nom" id="nom" type="text">
-                  </p>
-                  <p>
-                  <label for="poids">Poids</label>
-                  <input name="poids" id="poids" type="number">
-                  <select name="type_poids" id="type_poids">
-                    <option>Livres (lbs)</option>
-                    <option>Kilos (Kg)</option>
-                  </select>
-                  </p>
-                  <p>
-                  <label for="taille">Taille</label>
-                  <input name="taille" id="taille" type="text">
-                  <select name="type_taille" id="type_taille">
-                    <option>Pieds / pouces</option>
-                    <option>Metre)</option>
-                  </select>
-                  </p>
                   <p>
                   <label for="yeux">Couleur des yeux</label>
                   <select name="yeux" id="yeux">

@@ -1,6 +1,7 @@
-<div class="question text_1colonne">
+<div class="question num_deroulant_2colonnes">
   <label for="<%= question.id %>"><%= question.nom %></label>
-  <select id="<%= question.id %>" name="<%= question.id %>">
+  <input id="<%= question.id %>" name="<%= question.id %>" type="number">
+  <select id="<%= question.id %>-option" name="<%= question.id %>-option">
     <% question.options.forEach((option) => { %>
         <option value="<%= option.toLowerCase() %>"><%= option %></option>
     <% }) %>
