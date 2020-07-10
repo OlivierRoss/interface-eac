@@ -17,6 +17,6 @@
     "ejs": "^3.1.3"
   },
   "scripts": {
-    "build-dev": "nodemon ./render.sh"
+    "build-dev": "nodemon --exec ./render.sh -e js,css,ejs,json"
   }
 }

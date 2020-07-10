@@ -20,13 +20,11 @@
       </div>
     </header>
 
-    <form>
-      <div id="container-type-crime">
-        <label for="type-crime">Type de crime</label>
-
-      </div>
-
-      <main class="o-main">
+    <main class="o-main">
+      <form>
+        <div class="o-container" id="container-type-crime">
+          <%- include(process.env.PWD + '/views/partials/question_text_1colonne.ejs', { question: sections.routing.questions[0] }) %>
+        </div>
         <div class="o-container">
 
           <div class="o-section">
@@ -215,9 +213,9 @@
           </div>
 
         </div>
-      </main>
+      </form>
+    </main>
 
-    </form>
 
     <script src="js/src/tabs.js"></script>
     <script>
