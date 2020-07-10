@@ -41,6 +41,10 @@
       "description": "Qui a commis le crime?",
       "questions": [
         {
+          "affichage": "sous_section",
+          "nom": "Description physique"
+        },
+        {
           "affichage": "text_1colonne",
           "id": "nom_complet",
           "nom": "Nom complet"
@@ -155,6 +159,42 @@
           "affichage": "textarea_1colonne",
           "id": "international",
           "nom": "Si le suspect est à l'extérieur du Canada, où et quand rentrera-t-il au pays?"
+        }
+      ]
+    },
+    "vehicules": {
+      "nom": "Véhicule",
+      "questions": [
+        {
+          "affichage": "text_1colonne",
+          "id": "marque_vehicule",
+          "nom": "Marque du véhicule"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "modele_vehicule",
+          "nom": "Modèle du véhicule"
+        },
+        {
+          "affichage": "deroulant_1colonne",
+          "id": "couleur_vehicule",
+          "nom": "Couleur du véhicule",
+          "options": [
+            "-------",
+            "Vert",
+            "Blanc",
+            "Plusieurs couleurs"
+          ]
+        },
+        {
+          "affichage": "num_1colonne",
+          "id": "annee_vehicule",
+          "nom": "Année du véhicule"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "numero_plaque",
+          "nom": "Numéro de plaque"
         }
       ]
     }

@@ -73,31 +73,11 @@
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2>Véhicule 1 <span style="float: right">+</span></h2>
-                  <p>
-                  <label for="marque">Marque du véhicule</label>
-                  <input name="marque" id="marque" type="text">
-                  </p>
-                  <p>
-                  <label for="modele">Modèle du véhicule</label>
-                  <input name="modele" id="modele" type="text">
-                  </p>
-                  <p>
-                  <label for="couleur_vehicule">Couleur  du véhicule</label>
-                  <select name="couleur_vehicule" id="couleur_vehicule">
-                    <option>Inconnu</option>
-                    <option>Bleu</option>
-                    <option>Vert</option>
-                  </select>
-                  </p>
-                  <p>
-                  <label for="annee">Année du véhicule</label>
-                  <input name="annee" id="annee" type="text">
-                  </p>
-                  <p>
-                  <label for="plaque">Numéro de plaque</label>
-                  <input name="plaque" id="plaque" type="text">
-                  </p>
+                  <h2><%= sections.vehicules.nom %></h2>
+                  <p><%= sections.vehicules.description %></p>
+                  <% sections.vehicules.questions.forEach((question) => { %>
+                  <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+                  <% }) %>
                 </div>
               </div>
               <div class="c-tab">

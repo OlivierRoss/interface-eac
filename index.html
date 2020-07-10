@@ -95,6 +95,11 @@
                   <h2>Suspects</h2>
                   <p>Qui a commis le crime?</p>
                   
+                  <div class="sous-section">
+  <h3>Description physique</h3>
+</div>
+
+                  
                   <div class="question text_1colonne">
   <label for="nom_complet">Nom complet</label>
   <input id="nom_complet" name="nom_complet" type="text" placeholder="">
@@ -249,31 +254,49 @@
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2>Véhicule 1 <span style="float: right">+</span></h2>
-                  <p>
-                  <label for="marque">Marque du véhicule</label>
-                  <input name="marque" id="marque" type="text">
-                  </p>
-                  <p>
-                  <label for="modele">Modèle du véhicule</label>
-                  <input name="modele" id="modele" type="text">
-                  </p>
-                  <p>
-                  <label for="couleur_vehicule">Couleur  du véhicule</label>
-                  <select name="couleur_vehicule" id="couleur_vehicule">
-                    <option>Inconnu</option>
-                    <option>Bleu</option>
-                    <option>Vert</option>
-                  </select>
-                  </p>
-                  <p>
-                  <label for="annee">Année du véhicule</label>
-                  <input name="annee" id="annee" type="text">
-                  </p>
-                  <p>
-                  <label for="plaque">Numéro de plaque</label>
-                  <input name="plaque" id="plaque" type="text">
-                  </p>
+                  <h2>Véhicule</h2>
+                  <p></p>
+                  
+                  <div class="question text_1colonne">
+  <label for="marque_vehicule">Marque du véhicule</label>
+  <input id="marque_vehicule" name="marque_vehicule" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question text_1colonne">
+  <label for="modele_vehicule">Modèle du véhicule</label>
+  <input id="modele_vehicule" name="modele_vehicule" type="text" placeholder="">
+</div>
+
+                  
+                  <div class="question deroulant_1colonne">
+  <label for="couleur_vehicule">Couleur du véhicule</label>
+  <select id="couleur_vehicule" name="couleur_vehicule">
+    
+        <option value="-------">-------</option>
+    
+        <option value="vert">Vert</option>
+    
+        <option value="blanc">Blanc</option>
+    
+        <option value="plusieurs couleurs">Plusieurs couleurs</option>
+    
+  </select>
+</div>
+
+                  
+                  <div class="question num_1colonne">
+  <label for="annee_vehicule">Année du véhicule</label>
+  <input id="annee_vehicule" name="annee_vehicule" type="number">
+</div>
+
+                  
+                  <div class="question text_1colonne">
+  <label for="numero_plaque">Numéro de plaque</label>
+  <input id="numero_plaque" name="numero_plaque" type="text" placeholder="">
+</div>
+
+                  
                 </div>
               </div>
               <div class="c-tab">
