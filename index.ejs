@@ -55,16 +55,11 @@
               </div>
               <div class="c-tab is-active">
                 <div class="c-tab__content">
-                  <h2>Crime</h2>
-                  <p>Donnez nous de l'information</p>
-                  <p>
-                  <label for="crime">Crime</label>
-                  <input name="crime" id="crime" type="text">
-                  </p>
-                  <p>
-                  <label for="date">Date du crime</label>
-                  <input name="date" id="date" type="date">
-                  </p>
+                  <h2><%= sections.crime.nom %></h2>
+                  <p><%= sections.crime.description %></p>
+                  <% sections.crime.questions.forEach((question) => { %>
+                    <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+                  <% }) %>
                   <p>
                   <label for="victime">Victime</label>
                   <input name="victime" id="victime" type="text">

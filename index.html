@@ -26,7 +26,13 @@
           
             <div class="question_text_1colonne">
   <label for="type_crime">Type de crime</label>
-  <input id="type_crime" name="type_crime" type="text">
+  <select id="type_crime" name="type_crime">
+    
+        <option value="drogues">Drogues</option>
+    
+        <option value="voie de fait">Voie de fait</option>
+    
+  </select>
 </div>
 
           
@@ -60,15 +66,26 @@
               <div class="c-tab is-active">
                 <div class="c-tab__content">
                   <h2>Crime</h2>
-                  <p>Donnez nous de l'information</p>
-                  <p>
-                  <label for="crime">Crime</label>
-                  <input name="crime" id="crime" type="text">
-                  </p>
-                  <p>
-                  <label for="date">Date du crime</label>
-                  <input name="date" id="date" type="date">
-                  </p>
+                  <p>Donnez-nous de l&#39;information</p>
+                  
+                    <div class="question_text_1colonne">
+  <label for="date_crime">Date du crime</label>
+  <input id="date_crime" name="date_crime" type="date">
+</div>
+
+                  
+                    <div class="question_text_1colonne">
+  <label for="victime">Victime du crime</label>
+  <input id="victime" name="victime" type="text">
+</div>
+
+                  
+                    <div class="question_text_1colonne">
+  <label for="description_crime">Description du crime</label>
+  <input id="description_crime" name="description_crime" type="text">
+</div>
+
+                  
                   <p>
                   <label for="victime">Victime</label>
                   <input name="victime" id="victime" type="text">

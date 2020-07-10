@@ -4,13 +4,34 @@
     "routing": {
       "questions": [
         {
-          "affichage": "question_text_1colonne",
+          "affichage": "deroulant_1colonne",
           "id": "type_crime",
           "nom": "Type de crime",
           "options": [
             "Drogues",
             "Voie de fait"
           ]
+        }
+      ]
+    },
+    "crime": {
+      "nom": "Crime",
+      "description": "Donnez-nous de l'information",
+      "questions": [
+        {
+          "affichage": "date_1colonne",
+          "id": "date_crime",
+          "nom": "Date du crime"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "victime",
+          "nom": "Victime du crime"
+        },
+        {
+          "affichage": "textarea_1colonne",
+          "id": "description_crime",
+          "nom": "Description du crime"
         }
       ]
     }

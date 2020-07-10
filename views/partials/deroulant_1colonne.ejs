@@ -1,0 +1,8 @@
+<div class="question_text_1colonne">
+  <label for="<%= question.id %>"><%= question.nom %></label>
+  <select id="<%= question.id %>" name="<%= question.id %>">
+    <% question.options.forEach((option) => { %>
+        <option value="<%= option.toLowerCase() %>"><%= option %></option>
+    <% }) %>
+  </select>
+</div>
