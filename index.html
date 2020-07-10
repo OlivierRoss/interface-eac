@@ -28,6 +28,8 @@
   <label for="type_crime">Quel type de crime voulez-vous dénoncer?</label>
   <select id="type_crime" name="type_crime">
     
+        <option value="-------">-------</option>
+    
         <option value="drogues">Drogues</option>
     
         <option value="voie de fait">Voie de fait</option>
@@ -107,46 +109,71 @@
                   
                   <div class="question num_deroulant_2colonnes">
   <label for="poids">Poids</label>
-  <input id="poids" name="poids" type="number">
-  <select id="poids-option" name="poids-option">
+  <div class="valeurs">
+    <input id="poids" name="poids" type="number">
+    <select id="poids-option" name="poids-option">
+      
+          <option value="livres (lbs)">Livres (lbs)</option>
+      
+          <option value="kilos (kg)">Kilos (Kg)</option>
+      
+    </select>
+  </div>
+</div>
+
+                  
+                  <div class="question deroulant_1colonne">
+  <label for="couleur_yeux">Couleur des yeux</label>
+  <select id="couleur_yeux" name="couleur_yeux">
     
-        <option value="livres (lbs)">Livres (lbs)</option>
+        <option value="-------">-------</option>
     
-        <option value="kilos (kg)">Kilos (Kg)</option>
+        <option value="verts">Verts</option>
+    
+        <option value="bleus">Bleus</option>
+    
+        <option value="rouges">Rouges</option>
     
   </select>
 </div>
 
                   
-                  <p>
-                  <p>
-                  <label for="yeux">Couleur des yeux</label>
-                  <select name="yeux" id="yeux">
-                    <option>Inconnu</option>
-                    <option>Bleu</option>
-                    <option>Vert</option>
-                  </select>
-                  </p>
-                  <p>
-                  <label for="cheveux">Couleur des cheveux</label>
-                  <select name="cheveux" id="cheveux">
-                    <option>Inconnu</option>
-                    <option>Bleu</option>
-                    <option>Vert</option>
-                  </select>
-                  </p>
-                  <p>
-                  <label for="age">Âge approximatif</label>
-                  <input name="age" id="age" type="number">
-                  </p>
-                  <p>
-                  <label for="sexe">Sexe</label>
-                  <select name="sexe" id="sexe">
-                    <option>Inconnu</option>
-                    <option>Homme</option>
-                    <option>Femme</option>
-                  </select>
-                  </p>
+                  <div class="question deroulant_1colonne">
+  <label for="couleur_cheveux">Couleur des cheveux</label>
+  <select id="couleur_cheveux" name="couleur_cheveux">
+    
+        <option value="-------">-------</option>
+    
+        <option value="verts">Verts</option>
+    
+        <option value="gris">Gris</option>
+    
+        <option value="rouges">Rouges</option>
+    
+  </select>
+</div>
+
+                  
+                  <div class="question num_1colonne">
+  <label for="age">Âge</label>
+  <input id="age" name="age" type="number">
+</div>
+
+                  
+                  <div class="question deroulant_1colonne">
+  <label for="sexe">Sexe</label>
+  <select id="sexe" name="sexe">
+    
+        <option value="-------">-------</option>
+    
+        <option value="homme">Homme</option>
+    
+        <option value="femme">Femme</option>
+    
+  </select>
+</div>
+
+                  
                   <p>
                   <label for="marques">Marques distinctives et tattouages</label>
                   <input name="marques" id="marques" type="text">

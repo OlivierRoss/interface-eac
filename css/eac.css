@@ -4,14 +4,15 @@
   justify-content: space-between;
 }
 
-.date_1colonne label, .text_1colonne label, .textarea_1colonne label {
+.date_1colonne label, .text_1colonne label, .num_1colonne label, .textarea_1colonne label, .num_deroulant_2colonnes label, .deroulant_1colonne label {
   width: 25%;
+  max-width: 25%;
   text-align: right;
   padding-right: 10px;
 }
 
-.date_1colonne input, .text_1colonne input, .textarea_1colonne textarea {
-  width: 75%; 
+.date_1colonne input, .text_1colonne input, .num_1colonne input, .textarea_1colonne textarea {
+  min-width: 75%; 
 }
 
 .deroulant_1colonne select {
@@ -20,7 +21,7 @@
   padding: 0 10px;
 }
 
-.question.deroulant_1colonne {
+#container-type-crime .question.deroulant_1colonne {
   align-items: center;
 }
 
@@ -28,3 +29,18 @@
   height: 100px;
 }
 
+.num_deroulant_2colonnes .valeurs {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.num_deroulant_2colonnes input {
+  width: inherit;
+}
+
+.num_deroulant_2colonnes select {
+  width: 20%;
+  min-width: 95px;
+  padding-left: 10px;
+}

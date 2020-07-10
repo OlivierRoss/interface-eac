@@ -8,6 +8,7 @@
           "id": "type_crime",
           "nom": "Quel type de crime voulez-vous dénoncer?",
           "options": [
+            "-------",
             "Drogues",
             "Voie de fait"
           ]
@@ -56,6 +57,43 @@
           "options": [
             "Livres (lbs)",
             "Kilos (Kg)"
+          ]
+        },
+        {
+          "affichage": "deroulant_1colonne",
+          "id": "couleur_yeux",
+          "nom": "Couleur des yeux",
+          "options": [
+            "-------",
+            "Verts",
+            "Bleus",
+            "Rouges"
+          ]
+        },
+        {
+          "affichage": "deroulant_1colonne",
+          "id": "couleur_cheveux",
+          "nom": "Couleur des cheveux",
+          "options": [
+            "-------",
+            "Verts",
+            "Gris",
+            "Rouges"
+          ]
+        },
+        {
+          "affichage": "num_1colonne",
+          "id": "age",
+          "nom": "Âge"
+        },
+        {
+          "affichage": "deroulant_1colonne",
+          "id": "sexe",
+          "nom": "Sexe",
+          "options": [
+            "-------",
+            "Homme",
+            "Femme"
           ]
         }
       ]

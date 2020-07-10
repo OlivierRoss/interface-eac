@@ -1,9 +1,11 @@
 <div class="question num_deroulant_2colonnes">
   <label for="<%= question.id %>"><%= question.nom %></label>
-  <input id="<%= question.id %>" name="<%= question.id %>" type="number">
-  <select id="<%= question.id %>-option" name="<%= question.id %>-option">
-    <% question.options.forEach((option) => { %>
-        <option value="<%= option.toLowerCase() %>"><%= option %></option>
-    <% }) %>
-  </select>
+  <div class="valeurs">
+    <input id="<%= question.id %>" name="<%= question.id %>" type="number">
+    <select id="<%= question.id %>-option" name="<%= question.id %>-option">
+      <% question.options.forEach((option) => { %>
+          <option value="<%= option.toLowerCase() %>"><%= option %></option>
+      <% }) %>
+    </select>
+  </div>
 </div>
