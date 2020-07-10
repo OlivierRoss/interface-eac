@@ -23,7 +23,9 @@
     <main class="o-main">
       <form>
         <div class="o-container" id="container-type-crime">
-          <%- include(process.env.PWD + '/views/partials/question_text_1colonne.ejs', { question: sections.routing.questions[0] }) %>
+          <% sections.routing.questions.forEach((question) => { %>
+            <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+          <% }) %>
         </div>
         <div class="o-container">
 

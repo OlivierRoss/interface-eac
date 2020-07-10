@@ -2,12 +2,15 @@
   "titre": "Signalement",
   "sections": {
     "routing": {
-      "nom": "Introduction",
       "questions": [
         {
+          "affichage": "question_text_1colonne",
           "id": "type_crime",
           "nom": "Type de crime",
-          "affichage": "question_text_1colonne"
+          "options": [
+            "Drogues",
+            "Voie de fait"
+          ]
         }
       ]
     }
