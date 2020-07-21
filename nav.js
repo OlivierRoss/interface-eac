@@ -58,6 +58,17 @@ function doubler_section (index, container) {
 
   // Mettre a jour les ids
   contenu.innerHTML.replace(/(\w+-)(1)(")/gm, "$1" + index + "$3");
+  let inputs = contenu.getElementsByTagName("input");
+  let textareas = contenu.getElementsByTagName("textarea");
+
+  // Reset les valeurs
+  [].forEach.call(inputs, (el) => {
+    el.value = "";
+  });
+
+  [].forEach.call(textareas, (el) => {
+    el.innerHTML = "";
+  });
 
   container.parentElement.appendChild(contenu);
 }
@@ -67,9 +78,21 @@ function readURL(input) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      input.nextElementSibling.src = e.target.result;
+      let image = input.nextElementSibling;
+      image.src = e.target.result;
+
+      toggle(input);
+      toggle(image);
     };
     reader.readAsDataURL(input.files[0]);
   }
+}
 
+function toggle (element) {
+  if(element.style.display == "none") {
+    element.style.display = "block";
+  }
+  else {
+    element.style.display = "none";
+  }
 }
