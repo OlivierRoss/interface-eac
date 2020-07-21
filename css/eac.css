@@ -66,3 +66,11 @@
 .plus {
   float: right;
 }
+
+.container-instance {
+  margin: 25px 0;
+}
+
+.container-instance:not(:first-of-type) {
+  border-top: 2px solid black;
+}

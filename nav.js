@@ -1,3 +1,14 @@
+window.CONFIG = {
+  suspects: {
+    actuel: 1,
+    max: 5
+  },
+  vehicules: {
+    actuel: 1,
+    max: 5
+  }
+}
+
 window.onload = function () {
 
   // Evenement ajout
@@ -7,12 +18,19 @@ window.onload = function () {
       let parent_tab =  e.target.parentElement.parentElement.parentElement;
       let container = parent_tab.getElementsByClassName("container-instance")[0];
 
-      container.innerHTML += container.innerHTML;
+      let id_section = parent_tab.parentElement.id;
+      let config_section = window.CONFIG[id_section];
+
+      // Verifier max
+      if(config_section.actuel >= config_section.max) return;
+
+      // Integrer la nouvelle section
+      doubler_section(config_section.actuel, container);
+
+      // Avancer le compteur
+      config_section.actuel += 1;
     })
   });
-
-  // Prendre tous les noeuds apres le h2 et les mettre dans un container
-
 
   var myTabs = tabs({
     el: '#navigation',
@@ -25,4 +43,17 @@ window.onload = function () {
   // WTF ...
   myTabs.goToTab(1);
   myTabs.goToTab(0);
+}
+
+function doubler_section (index, container) {
+
+  // Copier
+  let contenu = document.createElement("div");
+  contenu.className = "container-instance";
+  contenu.innerHTML = container.innerHTML;
+
+  // Mettre a jour les ids
+  contenu.innerHTML.replace(/(\w+-)(1)(")/gm, "$1" + index + "$3");
+
+  container.parentElement.appendChild(contenu);
 }
