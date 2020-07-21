@@ -57,3 +57,7 @@
 .num_plusieurs_colonnes input, .text_2colonnes input {
   width: 100%;
 }
+
+.cases_et_texte {
+  justify-content: left;
+}

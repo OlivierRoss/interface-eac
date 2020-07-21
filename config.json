@@ -101,11 +101,6 @@
           "nom": "Date du crime"
         },
         {
-          "affichage": "text_1colonne",
-          "id": "victime",
-          "nom": "Victime du crime"
-        },
-        {
           "affichage": "textarea_1colonne",
           "id": "description_crime",
           "nom": "Description du crime"
@@ -115,6 +110,7 @@
     "suspects": {
       "nom": "Suspects",
       "description": "Qui a commis le crime?",
+      "multiples": true,
       "questions": [
         {
           "affichage": "sous_section",
@@ -240,6 +236,7 @@
     },
     "vehicules": {
       "nom": "Véhicule",
+      "multiples": true,
       "questions": [
         {
           "affichage": "text_1colonne",
@@ -273,6 +270,108 @@
           "nom": "Numéro de plaque"
         }
       ]
+    },
+    "drogues": {
+      "nom": "Drogues",
+      "questions": [
+        {
+          "affichage": "cases_et_texte",
+          "id": "drogues",
+          "options": [
+            {
+              "id": "cannabis",
+              "nom_commun": "Plant de cannabis",
+              "noms_rue": "Pote, Marijuana, Marihuana, herbe, ganja, dope, etc."
+            },
+            {
+              "id": "cocotte",
+              "nom_commun": "Cocotte de cannabis",
+              "noms_rue": "Pote, Marijuana, Marihuana, herbe, buds, fleurs, ganja, dope, etc."
+            },
+            {
+              "id": "bouture",
+              "nom_commun": "Bouture de cannabis",
+              "noms_rue": "Clône, bébé, etc."
+            },
+            {
+              "id": "graines",
+              "nom_commun": "Graines de cannabis",
+              "noms_rue": "Graines, semences, seeds, etc."
+            },
+            {
+              "id": "vrac",
+              "nom_commun": "Vrac de cannabis",
+              "noms_rue": "Feuille, résidus, garbag, etc."
+            },
+            {
+              "id": "hashich",
+              "nom_commun": "Haschish / Huile de cannabis",
+              "noms_rue": "Hasch, huile, bite, brun, shit, etc."
+            },
+            {
+              "id": "salvia",
+              "nom_commun": "Salvia",
+              "noms_rue": "Feuilles"
+            },
+            {
+              "id": "cannabis_synthetique",
+              "nom_commun": "Cannabis synthétique",
+              "noms_rue": "Marijuana synthétique, etc."
+            },
+            {
+              "id": "ketamine",
+              "nom_commun": "Ketamine",
+              "noms_rue": "Spécial K, Vitamine K, Ket, Ketty, etc."
+            },
+            {
+              "id": "pcp",
+              "nom_commun": "PCP",
+              "noms_rue": "Angel dust, Mescaline, etc."
+            },
+            {
+              "id": "nexus",
+              "nom_commun": "Nexus",
+              "noms_rue": "Peanut, Nex, etc."
+            },
+            {
+              "id": "champignons",
+              "nom_commun": "Champignons magiques",
+              "noms_rue": "Psilocybine, mush, champignons, shrooms, etc."
+            },
+            {
+              "id": "lsd",
+              "nom_commun": "LSD",
+              "noms_rue": "Buvard, acide, stamp, etc."
+            },
+            {
+              "id": "mescaline",
+              "nom_commun": "Mescaline",
+              "noms_rue": "Peyote, cactus, mess, PCP, horse, etc."
+            },
+            {
+              "id": "piperazine",
+              "nom_commun": "Pipérazine",
+              "noms_rue": "BCP, TFMPP"
+            },
+            {
+              "id": "ghb",
+              "nom_commun": "GHB",
+              "noms_rue": "GBL, GH, drogue du viol, jus, ecstacy liquide, etc."
+            },
+            {
+              "id": "heroine",
+              "nom_commun": "Héroïne",
+              "noms_rue": "Smack, héro, horse, came, point, lol, etc."
+            },
+            {
+              "id": "opium",
+              "nom_commun": "Opium",
+              "noms_rue": "Poppy, opi, etc."
+            }
+          ]
+        }
+      ]
+
     }
   }
 }

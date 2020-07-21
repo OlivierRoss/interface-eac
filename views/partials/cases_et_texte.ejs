@@ -1,0 +1,6 @@
+<div class="question cases_et_texte">
+  <% question.options.forEach((option) => { %>
+    <input type="checkbox" id="<%= question.id + "-" + option.id %>" name="<%= question.id + "-" + option.id %>" value="<%= option.id %>">
+    <label for="<%= question.id + "-" + option.id %>"><%= option.nom_commun + " (" + option.noms_rue + ")" %></label>
+  <% }) %>
+</div>

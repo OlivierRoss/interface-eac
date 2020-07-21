@@ -29,8 +29,8 @@
             <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
           <% }) %>
         </div>
-        <div class="o-container">
-
+        <div id="formulaire-detaille" class="o-container">
+          TODO formulaire detaille cache au debut
           <div class="o-section">
             <div id="tabs" class="c-tabs no-js">
               <div class="c-tabs-nav">
@@ -59,6 +59,10 @@
                 <div class="c-tab__content">
                   <h2><%= sections.crime.nom %></h2>
                   <p><%= sections.crime.description %></p>
+                  <% if (sections.suspects.multiples) { %>
+                    Ajouter un plus
+                  <% } %>
+
                   <% sections.crime.questions.forEach((question) => { %>
                     <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
                   <% }) %>
@@ -84,9 +88,11 @@
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2>Stay Busy</h2>
-                  <p>Calendar ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
+                  <h2><%= sections.drogues.nom %></h2>
+                  <p><%= sections.drogues.description %></p>
+                  <% sections.drogues.questions.forEach((question) => { %>
+                  <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+                  <% }) %>
                 </div>
               </div>
               <div class="c-tab">
