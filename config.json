@@ -367,6 +367,91 @@
               "id": "opium",
               "nom_commun": "Opium",
               "noms_rue": "Poppy, opi, etc."
+            },
+            {
+              "id": "cocaine",
+              "nom_commun": "Cocaïne",
+              "noms_rue": "Coke, poudre, neige, flake, snow flake, C, etc."
+            },
+            {
+              "id": "crack",
+              "nom_commun": "Cocaïne base - crack",
+              "noms_rue": "Crack, roche, freebase, etc."
+            },
+            {
+              "id": "methamphetamine_comprime",
+              "nom_commun": "Méthamphétamine - comprimé",
+              "noms_rue": "Meth, speed, peanut, pilules, vitesse, etc."
+            },
+            {
+              "id": "methamphetamine_cristaux",
+              "nom_commun": "Méthamphétamine - cristaux",
+              "noms_rue": "Meth, crystal, ice, glass, tina, etc."
+            },
+            {
+              "id": "mephedrine",
+              "nom_commun": "Méphédrone",
+              "noms_rue": "MDPV, sels de bain, cocaïne synthétique, plastique, methylone, etc."
+            },
+            {
+              "id": "amphetamine",
+              "nom_commun": "Amphétamine",
+              "noms_rue": "Speed, peanut, etc."
+            },
+            {
+              "id": "khat",
+              "nom_commun": "Khat",
+              "noms_rue": "Qat, catha, gat, kat, plant, bundle, etc."
+            },
+            {
+              "id": "ecstasy",
+              "nom_commun": "Ecstasy",
+              "noms_rue": "MDMA, MDA, MDEA, E, X, XTC, etc."
+            },
+            {
+              "id": "triazolam",
+              "nom_commun": "Triazolam",
+              "noms_rue": "Halcion, etc."
+            },
+            {
+              "id": "diazepam",
+              "nom_commun": "Diazepam",
+              "noms_rue": "Valium, etc."
+            },
+            {
+              "id": "steroides",
+              "nom_commun": "Stéroïdes anabolisants",
+              "noms_rue": "Stéroïdes, etc."
+            },
+            {
+              "id": "viagra",
+              "nom_commun": "Viagra / Cialis",
+              "noms_rue": "Sildénafil, Tadalafil, etc."
+            },
+            {
+              "id": "methylphénidate",
+              "nom_commun": "Méthylphénidate",
+              "noms_rue": "Ritalin, Concerta, etc."
+            },
+            {
+              "id": "morphine",
+              "nom_commun": "Morphine",
+              "noms_rue": "Analgésiques opioïdes, Indéral, hydromorphone, etc."
+            },
+            {
+              "id": "oxycodone",
+              "nom_commun": "Oxycodone",
+              "noms_rue": "Oxycotin, oxy, oxy.ir, supeudol, etc."
+            },
+            {
+              "id": "oxycodone_acetaminophene",
+              "nom_commun": "Oxycodone avec acétaminophène",
+              "noms_rue": "Percocet, Endocet, Percodan, etc."
+            },
+            {
+              "id": "hydromorphone",
+              "nom_commun": "Hydromorphone",
+              "noms_rue": "Dilaudid, hydromorphone contin, etc."
             }
           ]
         }
