@@ -235,7 +235,7 @@
       ]
     },
     "vehicules": {
-      "nom": "Véhicule",
+      "nom": "Véhicules",
       "multiples": true,
       "questions": [
         {
@@ -454,9 +454,13 @@
               "noms_rue": "Dilaudid, hydromorphone contin, etc."
             }
           ]
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "autres_drogues",
+          "nom": "Autres drogues"
         }
       ]
-
     }
   }
 }

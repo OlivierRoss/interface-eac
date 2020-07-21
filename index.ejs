@@ -30,7 +30,6 @@
           <% }) %>
         </div>
         <div id="formulaire-detaille" class="o-container">
-          TODO formulaire detaille cache au debut
           <div class="o-section">
             <div id="tabs" class="c-tabs no-js">
               <div class="c-tabs-nav">
@@ -59,10 +58,6 @@
                 <div class="c-tab__content">
                   <h2><%= sections.crime.nom %></h2>
                   <p><%= sections.crime.description %></p>
-                  <% if (sections.suspects.multiples) { %>
-                    Ajouter un plus
-                  <% } %>
-
                   <% sections.crime.questions.forEach((question) => { %>
                     <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
                   <% }) %>
@@ -70,7 +65,12 @@
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2><%= sections.suspects.nom %></h2>
+                  <h2>
+                    <%= sections.suspects.nom %>
+                    <% if (sections.suspects.multiples) { %>
+                      <%- include(process.env.PWD + '/views/partials/plus.ejs') %>
+                    <% } %>
+                  </h2>
                   <p><%= sections.suspects.description %></p>
                   <% sections.suspects.questions.forEach((question) => { %>
                   <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
@@ -79,7 +79,12 @@
               </div>
               <div class="c-tab">
                 <div class="c-tab__content">
-                  <h2><%= sections.vehicules.nom %></h2>
+                  <h2>
+                    <%= sections.vehicules.nom %>
+                    <% if (sections.vehicules.multiples) { %>
+                      <%- include(process.env.PWD + '/views/partials/plus.ejs') %>
+                    <% } %>
+                  </h2>
                   <p><%= sections.vehicules.description %></p>
                   <% sections.vehicules.questions.forEach((question) => { %>
                   <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>

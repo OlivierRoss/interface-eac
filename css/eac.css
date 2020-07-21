@@ -60,4 +60,9 @@
 
 .cases_et_texte {
   justify-content: left;
+  flex-direction: column;
+}
+
+.plus {
+  float: right;
 }
