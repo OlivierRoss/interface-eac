@@ -1,0 +1,17 @@
+<div class="c-tab">
+  <div class="c-tab__content">
+    <h2>
+      <%= section.nom %>
+      <% if (section.multiples) { %>
+        <div id="<%= section.id %>" class="plus">
+          <i class="fas fa-plus"></i>
+        </div>
+      <% } %>
+    </h2>
+    <p><%= section.description %></p>
+    <% section.questions.forEach((question) => { %>
+        <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+    <% }) %>
+  </div>
+</div>
+

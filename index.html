@@ -195,7 +195,7 @@
         </div>
         <div id="formulaire-detaille" class="o-container">
           <div class="o-section">
-            <div id="tabs" class="c-tabs no-js">
+            <div id="navigation" class="c-tabs no-js">
               <div class="c-tabs-nav">
                 <a href="#" class="c-tabs-nav__link is-active">
                   <i class="fas fa-times-circle"></i>
@@ -218,56 +218,67 @@
                   <span>Images</span>
                 </a>
               </div>
-              <div class="c-tab is-active">
-                <div class="c-tab__content">
-                  <h2>Crime</h2>
-                  <p>Donnez-nous de l&#39;information</p>
-                  
-                    <div class="question date_1colonne">
+              
+                
+              
+                
+                  <div class="c-tab">
+  <div class="c-tab__content">
+    <h2>
+      Crime
+      
+    </h2>
+    <p>Donnez-nous de l&#39;information</p>
+    
+        <div class="question date_1colonne">
   <label for="date_crime">Date du crime</label>
   <input id="date_crime" name="date_crime" type="date">
 </div>
 
-                  
-                    <div class="question textarea_1colonne">
+    
+        <div class="question textarea_1colonne">
   <label for="description_crime">Description du crime</label>
   <textarea id="description_crime" name="description_crime"></textarea>
 </div>
 
-                  
-                </div>
-              </div>
-              <div class="c-tab">
-                <div class="c-tab__content">
-                  <h2>
-                    Suspects
-                    
-                      <div class="plus">
-  <i class="fas fa-plus"></i>
+    
+  </div>
 </div>
 
-                    
-                  </h2>
-                  <p>Qui a commis le crime?</p>
-                  
-                  <div class="sous-section">
+
+                
+              
+                
+                  <div class="c-tab">
+  <div class="c-tab__content">
+    <h2>
+      Suspects
+      
+        <div id="suspects" class="plus">
+          <i class="fas fa-plus"></i>
+        </div>
+      
+    </h2>
+    <p>Qui a commis le crime?</p>
+    
+        <div class="sous-section">
   <h3>Description physique</h3>
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="nom_complet">Nom complet</label>
   <input id="nom_complet" name="nom_complet" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="taille">Taille</label>
   <input id="taille" name="taille" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question num_deroulant_2colonnes">
+    
+        <div class="question num_deroulant_2colonnes">
   <label for="poids">Poids</label>
   <div class="valeurs">
     <input id="poids" name="poids" type="number">
@@ -281,8 +292,8 @@
   </div>
 </div>
 
-                  
-                  <div class="question deroulant_1colonne">
+    
+        <div class="question deroulant_1colonne">
   <label for="couleur_yeux">Couleur des yeux</label>
   <select id="couleur_yeux" name="couleur_yeux">
     
@@ -297,8 +308,8 @@
   </select>
 </div>
 
-                  
-                  <div class="question deroulant_1colonne">
+    
+        <div class="question deroulant_1colonne">
   <label for="couleur_cheveux">Couleur des cheveux</label>
   <select id="couleur_cheveux" name="couleur_cheveux">
     
@@ -313,14 +324,14 @@
   </select>
 </div>
 
-                  
-                  <div class="question num_1colonne">
+    
+        <div class="question num_1colonne">
   <label for="age">Âge</label>
   <input id="age" name="age" type="number">
 </div>
 
-                  
-                  <div class="question deroulant_1colonne">
+    
+        <div class="question deroulant_1colonne">
   <label for="sexe">Sexe</label>
   <select id="sexe" name="sexe">
     
@@ -333,106 +344,110 @@
   </select>
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="marques_distinctives">Marques distinctives et tattouages</label>
   <input id="marques_distinctives" name="marques_distinctives" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="armes">Armes</label>
   <input id="armes" name="armes" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="affiliation">Affiliation</label>
   <input id="affiliation" name="affiliation" type="text" placeholder="Ex: Motards, Mafia, Gang de rue">
 </div>
 
-                  
-                  <div class="question textarea_1colonne">
+    
+        <div class="question textarea_1colonne">
   <label for="autres_details">Autres détails importants</label>
   <textarea id="autres_details" name="autres_details"></textarea>
 </div>
 
-                  
-                  <div class="sous-section">
+    
+        <div class="sous-section">
   <h3>Adresse</h3>
 </div>
 
-                  
-                  <div class="question num_1colonne">
+    
+        <div class="question num_1colonne">
   <label for="numero_porte">Numéro de porte</label>
   <input id="numero_porte" name="numero_porte" type="number">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="rue">Rue</label>
   <input id="rue" name="rue" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question num_1colonne">
+    
+        <div class="question num_1colonne">
   <label for="appartement">Numéro d&#39;appartement</label>
   <input id="appartement" name="appartement" type="number">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="ville">Ville</label>
   <input id="ville" name="ville" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question text_2colonnes">
+    
+        <div class="question text_2colonnes">
   <label for="telephone">Téléphone</label>
   <input id="telephone" name="telephone" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question text_2colonnes">
+    
+        <div class="question text_2colonnes">
   <label for="cellulaire">Cellulaire</label>
   <input id="cellulaire" name="cellulaire" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question textarea_1colonne">
+    
+        <div class="question textarea_1colonne">
   <label for="international">Si le suspect est à l&#39;extérieur du Canada, où et quand rentrera-t-il au pays?</label>
   <textarea id="international" name="international"></textarea>
 </div>
 
-                  
-                </div>
-              </div>
-              <div class="c-tab">
-                <div class="c-tab__content">
-                  <h2>
-                    Véhicules
-                    
-                      <div class="plus">
-  <i class="fas fa-plus"></i>
+    
+  </div>
 </div>
 
-                    
-                  </h2>
-                  <p></p>
-                  
-                  <div class="question text_1colonne">
+
+                
+              
+                
+                  <div class="c-tab">
+  <div class="c-tab__content">
+    <h2>
+      Véhicules
+      
+        <div id="vehicules" class="plus">
+          <i class="fas fa-plus"></i>
+        </div>
+      
+    </h2>
+    <p></p>
+    
+        <div class="question text_1colonne">
   <label for="marque_vehicule">Marque du véhicule</label>
   <input id="marque_vehicule" name="marque_vehicule" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="modele_vehicule">Modèle du véhicule</label>
   <input id="modele_vehicule" name="modele_vehicule" type="text" placeholder="">
 </div>
 
-                  
-                  <div class="question deroulant_1colonne">
+    
+        <div class="question deroulant_1colonne">
   <label for="couleur_vehicule">Couleur du véhicule</label>
   <select id="couleur_vehicule" name="couleur_vehicule">
     
@@ -447,27 +462,35 @@
   </select>
 </div>
 
-                  
-                  <div class="question num_1colonne">
+    
+        <div class="question num_1colonne">
   <label for="annee_vehicule">Année du véhicule</label>
   <input id="annee_vehicule" name="annee_vehicule" type="number">
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="numero_plaque">Numéro de plaque</label>
   <input id="numero_plaque" name="numero_plaque" type="text" placeholder="">
 </div>
 
-                  
-                </div>
-              </div>
-              <div class="c-tab">
-                <div class="c-tab__content">
-                  <h2>Drogues</h2>
-                  <p></p>
-                  
-                  <div class="question cases_et_texte">
+    
+  </div>
+</div>
+
+
+                
+              
+                
+                  <div class="c-tab">
+  <div class="c-tab__content">
+    <h2>
+      Drogues
+      
+    </h2>
+    <p></p>
+    
+        <div class="question cases_et_texte">
   
     <p>
     <input type="checkbox" id="drogues-cannabis" name="drogues-cannabis" value="cannabis">
@@ -646,42 +669,39 @@
   
 </div>
 
-                  
-                  <div class="question text_1colonne">
+    
+        <div class="question text_1colonne">
   <label for="autres_drogues">Autres drogues</label>
   <input id="autres_drogues" name="autres_drogues" type="text" placeholder="">
 </div>
 
-                  
-                </div>
-              </div>
-              <div class="c-tab">
-                <div class="c-tab__content">
-                  <h2>Images</h2>
-                  <div style="display: flex; justify-content: space-between;">
-                    <img style="width: 20%;" src="/images/camera.jpeg">
-                    <img style="width: 20%;" src="/images/camera.jpeg">
-                    <img style="width: 20%;" src="/images/camera.jpeg">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    
+  </div>
+</div>
 
-        </div>
+
+                
+              
+                
+                  <div class="c-tab">
+  <div class="c-tab__content">
+    <h2>
+      Images
+      
+    </h2>
+    <p></p>
+    
+  </div>
+</div>
+
+
+                
+              
+            </div> 
+          </div> 
+        </div> 
       </form>
     </main>
-
-
     <script src="js/src/tabs.js"></script>
-    <script>
-      var myTabs = tabs({
-        el: '#tabs',
-        tabNavigationLinks: '.c-tabs-nav__link',
-        tabContentContainers: '.c-tab'
-      });
-
-myTabs.init();
-    </script>
   </body>
 </html>
