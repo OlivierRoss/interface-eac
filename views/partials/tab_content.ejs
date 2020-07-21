@@ -8,10 +8,12 @@
         </div>
       <% } %>
     </h2>
-    <p><%= section.description %></p>
-    <% section.questions.forEach((question) => { %>
-        <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
-    <% }) %>
+    <div class="container-instance">
+      <p><%= section.description %></p>
+      <% section.questions.forEach((question) => { %>
+          <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question, multiples: section.multiples }) %>
+      <% }) %>
+    </div>
   </div>
 </div>
 

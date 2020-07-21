@@ -26,7 +26,7 @@
       <form>
         <div class="o-container" id="container-type-crime">
           <% sections.routing.questions.forEach((question) => { %>
-            <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question }) %>
+            <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question, multiples: sections.routing.multiples }) %>
           <% }) %>
         </div>
         <div id="formulaire-detaille" class="o-container">

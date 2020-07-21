@@ -2,6 +2,7 @@
   "titre": "Signalement",
   "sections": {
     "routing": {
+      "multiples": false,
       "questions": [
         {
           "affichage": "deroulant_1colonne",
@@ -95,6 +96,7 @@
       "id": "crime",
       "nom": "Crime",
       "description": "Donnez-nous de l'information",
+      "multiples": false,
       "questions": [
         {
           "affichage": "date_1colonne",
@@ -277,6 +279,7 @@
     "drogues": {
       "id": "drogues",
       "nom": "Drogues",
+      "multiples": false,
       "questions": [
         {
           "affichage": "cases_et_texte",
@@ -469,6 +472,7 @@
     "images": {
       "id": "images",
       "nom": "Images",
+      "multiples": false,
       "questions": []
     }
   }
