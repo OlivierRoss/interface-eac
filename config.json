@@ -104,9 +104,15 @@
           "nom": "Date du crime"
         },
         {
+          "affichage": "text_1colonne",
+          "id": "lieu_crime",
+          "nom": "Lieu du crime"
+        },
+        {
           "affichage": "textarea_1colonne",
           "id": "description_crime",
-          "nom": "Description du crime"
+          "nom": "Description du crime",
+          "placeholder": "Donnez-nous le plus d'information possible"
         }
       ]
     },
@@ -118,7 +124,7 @@
       "questions": [
         {
           "affichage": "sous_section",
-          "nom": "Description physique"
+          "nom": "Description du suspect"
         },
         {
           "affichage": "text_1colonne",
@@ -173,7 +179,8 @@
           "options": [
             "-------",
             "Homme",
-            "Femme"
+            "Femme",
+            "Autre"
           ]
         },
         {
@@ -185,6 +192,11 @@
           "affichage": "text_1colonne",
           "id": "armes",
           "nom": "Armes"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "animaux",
+          "nom": "Animaux"
         },
         {
           "affichage": "text_1colonne",
@@ -472,8 +484,14 @@
     "images": {
       "id": "images",
       "nom": "Images",
-      "multiples": false,
-      "questions": []
+      "multiples": true,
+      "questions": [
+        {
+          "affichage": "image_1colonne",
+          "id": "image",
+          "nom": "Image"
+        }
+      ]
     }
   }
 }

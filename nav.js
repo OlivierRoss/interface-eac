@@ -6,6 +6,10 @@ window.CONFIG = {
   vehicules: {
     actuel: 1,
     max: 5
+  },
+  images: {
+    actuel: 1,
+    max: 5
   }
 }
 
@@ -56,4 +60,16 @@ function doubler_section (index, container) {
   contenu.innerHTML.replace(/(\w+-)(1)(")/gm, "$1" + index + "$3");
 
   container.parentElement.appendChild(contenu);
+}
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      input.nextElementSibling.src = e.target.result;
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+
 }

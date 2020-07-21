@@ -237,9 +237,15 @@
 </div>
 
       
+          <div class="question text_1colonne">
+  <label for="lieu_crime">Lieu du crime</label>
+  <input id="lieu_crime" name="lieu_crime" type="text" placeholder="">
+</div>
+
+      
           <div class="question textarea_1colonne">
   <label for="description_crime">Description du crime</label>
-  <textarea id="description_crime" name="description_crime"></textarea>
+  <textarea id="description_crime" name="description_crime" placeholder="Donnez-nous le plus d&#39;information possible"></textarea>
 </div>
 
       
@@ -265,7 +271,7 @@
       <p>Qui a commis le crime?</p>
       
           <div class="sous-section">
-  <h3>Description physique</h3>
+  <h3>Description du suspect</h3>
 </div>
 
       
@@ -344,6 +350,8 @@
     
         <option value="femme">Femme</option>
     
+        <option value="autre">Autre</option>
+    
   </select>
 </div>
 
@@ -361,6 +369,12 @@
 
       
           <div class="question text_1colonne">
+  <label for="animaux-1">Animaux</label>
+  <input id="animaux-1" name="animaux-1" type="text" placeholder="">
+</div>
+
+      
+          <div class="question text_1colonne">
   <label for="affiliation-1">Affiliation</label>
   <input id="affiliation-1" name="affiliation-1" type="text" placeholder="Ex: Motards, Mafia, Gang de rue">
 </div>
@@ -368,7 +382,7 @@
       
           <div class="question textarea_1colonne">
   <label for="autres_details-1">Autres détails importants</label>
-  <textarea id="autres_details-1" name="autres_details-1"></textarea>
+  <textarea id="autres_details-1" name="autres_details-1" placeholder=""></textarea>
 </div>
 
       
@@ -415,7 +429,7 @@
       
           <div class="question textarea_1colonne">
   <label for="international-1">Si le suspect est à l&#39;extérieur du Canada, où et quand rentrera-t-il au pays?</label>
-  <textarea id="international-1" name="international-1"></textarea>
+  <textarea id="international-1" name="international-1" placeholder=""></textarea>
 </div>
 
       
@@ -696,9 +710,20 @@
     <h2>
       Images
       
+        <div class="plus">
+          <i class="fas fa-plus"></i>
+        </div>
+      
     </h2>
     <div class="container-instance">
       <p></p>
+      
+          <div class="question image_1colonne">
+  <label for="image-1">Image</label>
+  <input id="image-1" name="image-1" type="file" onchange="readURL(this);">
+  <img id="image-1-display" src="#">
+</div>
+
       
     </div>
   </div>
