@@ -60,14 +60,21 @@ function doubler_section (index, container) {
   contenu.innerHTML.replace(/(\w+-)(1)(")/gm, "$1" + index + "$3");
   let inputs = contenu.getElementsByTagName("input");
   let textareas = contenu.getElementsByTagName("textarea");
+  let imgs = contenu.getElementsByTagName("img");
 
   // Reset les valeurs
   [].forEach.call(inputs, (el) => {
     el.value = "";
+    el.style.display = "initial";
   });
 
   [].forEach.call(textareas, (el) => {
     el.innerHTML = "";
+  });
+
+  [].forEach.call(imgs, (el) => {
+    el.src = "";
+    el.style.display = "none";
   });
 
   container.parentElement.appendChild(contenu);
@@ -90,7 +97,7 @@ function readURL(input) {
 
 function toggle (element) {
   if(element.style.display == "none") {
-    element.style.display = "block";
+    element.style.display = "initial";
   }
   else {
     element.style.display = "none";

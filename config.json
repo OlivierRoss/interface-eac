@@ -490,6 +490,11 @@
           "affichage": "image_1colonne",
           "id": "image",
           "nom": "Image"
+        },
+        {
+          "affichage": "text_1colonne",
+          "id": "description_image",
+          "nom": "Description de l'image (si nécessaire)"
         }
       ]
     }
