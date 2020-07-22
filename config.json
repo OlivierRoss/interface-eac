@@ -247,6 +247,11 @@
           "affichage": "textarea_1colonne",
           "id": "international",
           "nom": "Si le suspect est à l'extérieur du Canada, où et quand rentrera-t-il au pays?"
+        },
+        {
+          "affichage": "textarea_1colonne",
+          "id": "lien_autres_suspects",
+          "nom": "Lien avec les autres suspects"
         }
       ]
     },
