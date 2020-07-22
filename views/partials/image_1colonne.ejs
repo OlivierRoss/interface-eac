@@ -1,5 +1,6 @@
 <div class="question image_1colonne">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
+  <i class="fas fa-times-circle fa-2x" style="display: none;" onclick="delete_image(this);"></i> 
+  <label for="<%= question.id + (multiples ? "-1" : "") %>" style="margin-right: auto; padding-left: 10px;"><%= question.nom %></label>
   <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="file" onchange="readURL(this);">
   <img id="<%= question.id + (multiples ? "-1" : "") %>-display" src="#" style="display: none;">
 </div>

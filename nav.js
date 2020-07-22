@@ -86,10 +86,12 @@ function readURL(input) {
 
     reader.onload = function (e) {
       let image = input.nextElementSibling;
+      let icone_delete = input.previousElementSibling.previousElementSibling;
       image.src = e.target.result;
 
       toggle(input);
       toggle(image);
+      toggle(icone_delete);
     };
     reader.readAsDataURL(input.files[0]);
   }
@@ -102,4 +104,8 @@ function toggle (element) {
   else {
     element.style.display = "none";
   }
+}
+
+function delete_image(element) {
+  element.parentElement.parentElement.removeChild(element.parentElement);
 }
