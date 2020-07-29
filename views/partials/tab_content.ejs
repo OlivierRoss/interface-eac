@@ -1,13 +1,16 @@
 <div id="<%= section.id %>" class="c-tab">
   <div class="c-tab__content">
-    <h2>
-      <%= section.nom %>
+    <div class="entete-tab">
+      <h2> <%= section.nom %> </h2>
       <% if (section.multiples) { %>
+        <div class="liste-tab">
+
+        </div>
         <div class="plus">
           <i class="fas fa-plus"></i>
         </div>
       <% } %>
-    </h2>
+    </div>
     <div class="container-instance">
       <p><%= section.description %></p>
       <% section.questions.forEach((question) => { %>

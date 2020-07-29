@@ -1,3 +1,15 @@
+.entete-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.liste-tab {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+
 .question {
   position: relative;
   padding: 10px 0;
