@@ -15,6 +15,8 @@ window.CONFIG = {
 
 window.onload = function () {
 
+  construire_formulaire();
+
   // Evenement ajout
   let plus = document.getElementsByClassName("plus");
   [].forEach.call(plus, (el) => {
@@ -37,7 +39,7 @@ window.onload = function () {
   });
 
   var myTabs = tabs({
-    el: '#navigation',
+    el: '#menu-navigation',
     tabNavigationLinks: '.c-tabs-nav__link',
     tabContentContainers: '.c-tab'
   });
@@ -47,6 +49,18 @@ window.onload = function () {
   // WTF ...
   myTabs.goToTab(1);
   myTabs.goToTab(0);
+}
+
+function construire_formulaire () {
+  let type_crime = construire_type_crime();
+  document.getElementById("container-type-crime").innerHTML = type_crime;
+}
+
+function construire_type_crime () {
+  let section = config.sections.routing;
+  let question = section.questions[0];
+
+  return ejs.render(modeles[question.affichage], { question: question, multiples: section.multiples });
 }
 
 function doubler_section (index, container) {
