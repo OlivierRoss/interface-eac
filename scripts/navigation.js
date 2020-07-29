@@ -15,29 +15,13 @@ window.CONFIG = {
 
 window.onload = function () {
 
+  // Initialisation
+  initialiser_instances();
+
+  // Construire et afficher le formulaire
   construire_formulaire();
 
-  // Evenement ajout
-  let plus = document.getElementsByClassName("plus");
-  [].forEach.call(plus, (el) => {
-    el.addEventListener("click", function (e) {
-      let parent_tab =  e.target.parentElement.parentElement.parentElement;
-      let container = parent_tab.getElementsByClassName("container-instance")[0];
-
-      let id_section = parent_tab.parentElement.id;
-      let config_section = window.CONFIG[id_section];
-
-      // Verifier max
-      if(config_section.actuel >= config_section.max) return;
-
-      // Integrer la nouvelle section
-      doubler_section(config_section.actuel, container);
-
-      // Avancer le compteur
-      config_section.actuel += 1;
-    })
-  });
-
+  // Activer la tabulation
   var myTabs = tabs({
     el: '#navigation',
     tabNavigationLinks: '.c-tabs-nav__link',
@@ -49,6 +33,12 @@ window.onload = function () {
   // WTF ...
   myTabs.goToTab(1);
   myTabs.goToTab(0);
+}
+
+function initialiser_instances () {
+  for(var section in config.sections) {
+    config.sections[section].nb_instances = 1;
+  }
 }
 
 function construire_formulaire () {
@@ -95,67 +85,20 @@ function construire_sections () {
   return sections_rendues;
 }
 
-function doubler_section (index, container) {
+function instancier (id_section) {
 
-  // Copier
-  let contenu = document.createElement("div");
-  contenu.className = "container-instance";
-  contenu.innerHTML = container.innerHTML;
+  // Incrementer les instances
+  ++config.sections[id_section].nb_instances;
 
-  // Mettre a jour les ids
-  contenu.innerHTML.replace(/(\w+-)(1)(")/gm, "$1" + index + "$3");
-  let inputs = contenu.getElementsByTagName("input");
-  let textareas = contenu.getElementsByTagName("textarea");
-  let imgs = contenu.getElementsByTagName("img");
+  // Creer la nouvelle instance
+  let nouvelle_instance = ejs.render(modeles.tab_content, { section: config.sections[id_section] })
 
-  // Reset les valeurs
-  [].forEach.call(inputs, (el) => {
-    el.value = "";
-    el.style.display = "initial";
-  });
+  // Extraire le container d'instance -- mal code ...
+  parser = new DOMParser();
+  doc = parser.parseFromString(nouvelle_instance, "text/html");
+  nouvel_element = doc.body.getElementsByClassName("container-instance")[0];
 
-  [].forEach.call(textareas, (el) => {
-    el.innerHTML = "";
-  });
-
-  [].forEach.call(imgs, (el) => {
-    el.src = "";
-    el.style.display = "none";
-  });
-
-  container.parentElement.appendChild(contenu);
+  // Ajouter le nouvel element a la section
+  document.getElementById(id_section).getElementsByClassName("c-tab__content")[0].appendChild(nouvel_element);
 }
 
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      let image = input.nextElementSibling;
-      let icone_delete = input.previousElementSibling.previousElementSibling;
-      image.src = e.target.result;
-
-      toggle(input);
-      toggle(image);
-      toggle(icone_delete);
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
-function toggle (element) {
-  if(element.style.display == "none") {
-    element.style.display = "initial";
-  }
-  else {
-    element.style.display = "none";
-  }
-}
-
-function delete_image(element) {
-  element.parentElement.parentElement.removeChild(element.parentElement);
-}
-
-function test () {
-  console.log(ejs.render(modeles.num_1colonne, { question: { id: 1 }, multiples: false }))
-}

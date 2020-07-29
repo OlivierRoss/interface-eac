@@ -2,34 +2,34 @@ var modeles = {
 
   date_1colonne: `
 <div class="question date_1colonne">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="date">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="date">
 </div>
   `,
   num_1colonne: ` <div class="question num_1colonne">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="number">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="number">
 </div> ` ,
   text_1colonne: `
 <div class="question text_1colonne">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="text" placeholder="<%= question.placeholder %>">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="text" placeholder="<%= question.placeholder %>">
 </div>
   `,
   cases_et_texte: `
 <div class="question cases_et_texte">
   <% question.options.forEach((option) => { %>
     <p>
-    <input type="checkbox" id="<%= question.id + "-" + option.id  + (multiples ? "-1" : "") %>" name="<%= question.id + "-" + option.id + (multiples ? "-1" : "") %>" value="<%= option.id %>">
-    <label for="<%= question.id + "-" + option.id + (multiples ? "-1" : "") %>"><%= option.nom_commun + " (" + option.noms_rue + ")" %></label>
+    <input type="checkbox" id="<%= question.id + "-" + option.id  + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + "-" + option.id + (multiples ? "-" + section.nb_instances : "") %>" value="<%= option.id %>">
+    <label for="<%= question.id + "-" + option.id + (multiples ? "-" + section.nb_instances : "") %>"><%= option.nom_commun + " (" + option.noms_rue + ")" %></label>
     </p>
   <% }) %>
 </div>
   `,
   deroulant_1colonne: `
 <div class="question deroulant_1colonne">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <select id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <select id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>">
     <% question.options.forEach((option) => { %>
         <option value="<%= option.toLowerCase() %>"><%= option %></option>
     <% }) %>
@@ -39,17 +39,17 @@ var modeles = {
   image_1colonne: `
 <div class="question image_1colonne">
   <i class="fas fa-times-circle fa-2x" style="display: none;" onclick="delete_image(this);"></i> 
-  <label for="<%= question.id + (multiples ? "-1" : "") %>" style="margin-right: auto; padding-left: 10px;"><%= question.nom %></label>
-  <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="file" onchange="readURL(this);">
-  <img id="<%= question.id + (multiples ? "-1" : "") %>-display" src="#" style="display: none;">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" style="margin-right: auto; padding-left: 10px;"><%= question.nom %></label>
+  <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="file" onchange="readURL(this);">
+  <img id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>-display" src="#" style="display: none;">
 </div>
   `,
   num_deroulant_2colonnes: `
 <div class="question num_deroulant_2colonnes">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
   <div class="valeurs">
-    <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="number">
-    <select id="<%= question.id + (multiples ? "-1" : "") %>-option" name="<%= question.id + (multiples ? "-1" : "") %>-option">
+    <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="number">
+    <select id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>-option" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>-option">
       <% question.options.forEach((option) => { %>
           <option value="<%= option.toLowerCase() %>"><%= option %></option>
       <% }) %>
@@ -59,8 +59,8 @@ var modeles = {
   `,
   num_plusieurs_colonnes: `
 <div class="question num_plusieurs_colonnes">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="text" placeholder="<%= question.placeholder %>">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="text" placeholder="<%= question.placeholder %>">
 </div>
   `,
   sous_section: `
@@ -76,14 +76,14 @@ var modeles = {
       <% if (section.multiples) { %>
         <div class="liste-tab"></div>
         <div class="plus">
-          <i class="fas fa-plus"></i>
+          <i class="fas fa-plus" onclick="instancier('<%= section.id %>')"></i>
         </div>
       <% } %>
     </div>
     <div class="container-instance">
       <p><%= section.description %></p>
       <% section.questions.forEach((question) => { %>
-          <%- ejs.render(modeles[ question.affichage], { question: question, multiples: section.multiples }) %>
+          <%- ejs.render(modeles[ question.affichage], { section: section, question: question, multiples: section.multiples }) %>
       <% }) %>
     </div>
   </div>
@@ -91,14 +91,14 @@ var modeles = {
   `,
   textarea_1colonne: `
 <div class="question textarea_1colonne">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <textarea id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" placeholder="<%= question.placeholder %>"></textarea>
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <textarea id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" placeholder="<%= question.placeholder %>"></textarea>
 </div>
   `,
   text_2colonnes: `
 <div class="question text_2colonnes">
-  <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
-  <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="text" placeholder="<%= question.placeholder %>">
+  <label for="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>"><%= question.nom %></label>
+  <input id="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" name="<%= question.id + (multiples ? "-" + section.nb_instances : "") %>" type="text" placeholder="<%= question.placeholder %>">
 </div>
   `,
   item_navigation: `
