@@ -52,6 +52,11 @@ function construire_formulaire () {
   document.getElementById("container-type-crime").innerHTML = type_crime;
   document.getElementById("items-navigation").innerHTML = navigation;
   document.getElementById("navigation").innerHTML += sections.join("");
+
+  // Afficher les containers
+  [].forEach.call(document.querySelectorAll(".container-instance"), (container) => {
+    container.className += "actif";
+  });
 }
 
 function construire_type_crime () {
@@ -87,18 +92,31 @@ function construire_sections () {
 
 function instancier (id_section) {
 
+  let section = config.sections[id_section];
+  let parser = new DOMParser();
+
   // Incrementer les instances
-  ++config.sections[id_section].nb_instances;
+  ++section.nb_instances;
 
   // Creer la nouvelle instance
-  let nouvelle_instance = ejs.render(modeles.tab_content, { section: config.sections[id_section] })
+  let nouvelle_instance = ejs.render(modeles.tab_content, { section: section})
 
   // Extraire le container d'instance -- mal code ...
-  parser = new DOMParser();
   doc = parser.parseFromString(nouvelle_instance, "text/html");
   nouvel_element = doc.body.getElementsByClassName("container-instance")[0];
 
   // Ajouter le nouvel element a la section
   document.getElementById(id_section).getElementsByClassName("c-tab__content")[0].appendChild(nouvel_element);
+
+  // Ajouter l'item de navigation
+  if(section.multiples) {
+    let nouvel_instance_item = ejs.render(modeles.item_instance, { section: section });
+
+    doc = parser.parseFromString(nouvel_instance_item, "text/html");
+    let nouvel_item = doc.body.getElementsByClassName("item-instance")[0];
+    document.getElementById(id_section).getElementsByClassName("liste-tab")[0].appendChild(nouvel_item);
+  }
 }
 
+// TODO afficher l'image
+function readURL (el) { }

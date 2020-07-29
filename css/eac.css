@@ -6,8 +6,25 @@
 
 .liste-tab {
   width: 50%;
-  height: 100%;
-  background-color: black;
+  
+  /* override justify-content: space-between */
+  margin-right: auto;
+  overflow: scroll;
+}
+
+.item-instance {
+  display: inline;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.container-instance {
+  display: none;
+}
+
+.container-instance.actif {
+  display: initial;
 }
 
 .question {

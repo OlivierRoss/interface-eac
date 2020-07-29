@@ -74,7 +74,9 @@ var modeles = {
     <div class="entete-tab">
       <h2> <%= section.nom %> </h2>
       <% if (section.multiples) { %>
-        <div class="liste-tab"></div>
+        <div class="liste-tab">
+          <%- ejs.render(modeles.item_instance, { section: section }) %>
+        </div>
         <div class="plus">
           <i class="fas fa-plus" onclick="instancier('<%= section.id %>')"></i>
         </div>
@@ -106,5 +108,11 @@ var modeles = {
       <i class="fas <%= section.icone %>"></i>
       <span><%= section.nom %></span>
     </a>
+  `,
+  item_instance: `
+    <div class="item-instance">
+      <i class="fas <%= section.icone %>"></i>
+      <span class="numero-item-instance"><%= section.nb_instances %></span>
+    </div>
   `
 }
