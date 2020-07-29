@@ -74,9 +74,7 @@ var modeles = {
     <div class="entete-tab">
       <h2> <%= section.nom %> </h2>
       <% if (section.multiples) { %>
-        <div class="liste-tab">
-
-        </div>
+        <div class="liste-tab"></div>
         <div class="plus">
           <i class="fas fa-plus"></i>
         </div>
@@ -85,7 +83,7 @@ var modeles = {
     <div class="container-instance">
       <p><%= section.description %></p>
       <% section.questions.forEach((question) => { %>
-          <%- include(process.env.PWD + '/views/partials/' + question.affichage + '.ejs', { question: question, multiples: section.multiples }) %>
+          <%- ejs.render(modeles[ question.affichage], { question: question, multiples: section.multiples }) %>
       <% }) %>
     </div>
   </div>
@@ -102,5 +100,11 @@ var modeles = {
   <label for="<%= question.id + (multiples ? "-1" : "") %>"><%= question.nom %></label>
   <input id="<%= question.id + (multiples ? "-1" : "") %>" name="<%= question.id + (multiples ? "-1" : "") %>" type="text" placeholder="<%= question.placeholder %>">
 </div>
+  `,
+  item_navigation: `
+    <a href="#" class="c-tabs-nav__link">
+      <i class="fas <%= section.icone %>"></i>
+      <span><%= section.nom %></span>
+    </a>
   `
 }

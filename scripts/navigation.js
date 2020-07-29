@@ -39,7 +39,7 @@ window.onload = function () {
   });
 
   var myTabs = tabs({
-    el: '#menu-navigation',
+    el: '#navigation',
     tabNavigationLinks: '.c-tabs-nav__link',
     tabContentContainers: '.c-tab'
   });
@@ -52,8 +52,16 @@ window.onload = function () {
 }
 
 function construire_formulaire () {
+
+  // Construire les elements
   let type_crime = construire_type_crime();
+  let navigation = construire_navigation();
+  let sections = construire_sections();
+
+  // Ajouter les elements dans la page
   document.getElementById("container-type-crime").innerHTML = type_crime;
+  document.getElementById("items-navigation").innerHTML = navigation;
+  document.getElementById("navigation").innerHTML += sections.join("");
 }
 
 function construire_type_crime () {
@@ -61,6 +69,30 @@ function construire_type_crime () {
   let question = section.questions[0];
 
   return ejs.render(modeles[question.affichage], { question: question, multiples: section.multiples });
+}
+
+function construire_navigation () {
+  let items_rendus = [];
+
+  for(var section in config.sections) {
+    if(section != "routing") {
+      items_rendus.push(ejs.render(modeles.item_navigation, { section: config.sections[section] }));
+    }
+  }
+
+  return items_rendus;
+}
+
+function construire_sections () {
+  let sections_rendues = [];
+
+  for(var section in config.sections) {
+    if(section != "routing") {
+      sections_rendues.push(ejs.render(modeles.tab_content, { section: config.sections[section] }));
+    }
+  }
+
+  return sections_rendues;
 }
 
 function doubler_section (index, container) {

@@ -97,6 +97,7 @@ var config = {
       "nom": "Crime",
       "description": "Donnez-nous de l'information",
       "multiples": false,
+      "icone": "fa-times-circle",
       "questions": [
         {
           "affichage": "date_1colonne",
@@ -121,6 +122,7 @@ var config = {
       "nom": "Suspects",
       "description": "Qui a commis le crime?",
       "multiples": true,
+      "icone": "fa-user-ninja",
       "questions": [
         {
           "affichage": "sous_section",
@@ -259,6 +261,7 @@ var config = {
       "id": "vehicules",
       "nom": "Véhicules",
       "multiples": true,
+      "icone": "fa-car",
       "questions": [
         {
           "affichage": "text_1colonne",
@@ -297,6 +300,7 @@ var config = {
       "id": "drogues",
       "nom": "Drogues",
       "multiples": false,
+      "icone": "fa-cannabis",
       "questions": [
         {
           "affichage": "cases_et_texte",
@@ -490,6 +494,7 @@ var config = {
       "id": "images",
       "nom": "Images",
       "multiples": true,
+      "icone": "fa-camera",
       "questions": [
         {
           "affichage": "image_1colonne",

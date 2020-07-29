@@ -31,34 +31,8 @@
         <div class="o-container" id="container-type-crime"> </div>
         <div id="formulaire-detaille" class="o-container">
           <div class="o-section">
-            <div id="menu-navigation" class="c-tabs no-js">
-              <div class="c-tabs-nav">
-                <a href="#" class="c-tabs-nav__link is-active">
-                  <i class="fas fa-times-circle"></i>
-                  <span>Crime</span>
-                </a>
-                <a href="#" class="c-tabs-nav__link">
-                  <i class="fas fa-user-ninja"></i>
-                  <span>Suspects</span>
-                </a>
-                <a href="#" class="c-tabs-nav__link">
-                  <i class="fas fa-car"></i>
-                  <span>Vehicules</span>
-                </a>
-                <a href="#" class="c-tabs-nav__link">
-                  <i class="fas fa-cannabis"></i>
-                  <span>Drogues</span>
-                </a>
-                <a href="#" class="c-tabs-nav__link">
-                  <i class="fas fa-camera"></i>
-                  <span>Images</span>
-                </a>
-              </div>
-              <% for(var section in sections ) { %>
-                <% if(section != "routing") { %>
-                  <%- include(process.env.PWD + '/views/partials/tab_content.ejs', { section: sections[section] }) %>
-                <% } %>
-              <% } %>
+            <div id="navigation" class="c-tabs no-js">
+              <div id="items-navigation" class="c-tabs-nav"></div>
             </div> 
           </div> 
         </div> 
