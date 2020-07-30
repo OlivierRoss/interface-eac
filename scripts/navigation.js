@@ -55,7 +55,7 @@ function construire_formulaire () {
 
   // Afficher les containers
   [].forEach.call(document.querySelectorAll(".container-instance"), (container) => {
-    container.className += "actif";
+    container.classList.add("actif");
   });
 }
 
@@ -116,6 +116,20 @@ function instancier (id_section) {
     let nouvel_item = doc.body.getElementsByClassName("item-instance")[0];
     document.getElementById(id_section).getElementsByClassName("liste-tab")[0].appendChild(nouvel_item);
   }
+}
+
+function set_instance_active (el) {
+
+  // Activation de l'item
+  [].forEach.call(el.parentNode.querySelectorAll(".item-instance"), (item) => { item.classList.remove("actif") });
+  el.classList.add("actif");
+
+  // Activation du container
+  let id_instance = el.getAttribute("data-id-container-instance");
+  let container_focus = document.getElementById(id_instance);
+
+  [].forEach.call(container_focus.parentNode.querySelectorAll(".container-instance"), (container) => { container.classList.remove("actif"); })
+  container_focus.classList.add("actif");
 }
 
 // TODO afficher l'image

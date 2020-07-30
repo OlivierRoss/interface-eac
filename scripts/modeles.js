@@ -82,7 +82,7 @@ var modeles = {
         </div>
       <% } %>
     </div>
-    <div class="container-instance">
+    <div id="<%= section.id %>-<%= section.nb_instances %>" class="container-instance">
       <p><%= section.description %></p>
       <% section.questions.forEach((question) => { %>
           <%- ejs.render(modeles[ question.affichage], { section: section, question: question, multiples: section.multiples }) %>
@@ -110,7 +110,7 @@ var modeles = {
     </a>
   `,
   item_instance: `
-    <div class="item-instance">
+    <div class="item-instance" data-id-container-instance="<%= section.id %>-<%= section.nb_instances %>" onclick="set_instance_active(this);">
       <i class="fas <%= section.icone %>"></i>
       <span class="numero-item-instance"><%= section.nb_instances %></span>
     </div>
