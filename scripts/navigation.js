@@ -39,7 +39,7 @@ function construire_formulaire () {
 
   // Ajouter les elements dans la page
   document.getElementById("container-type-crime").innerHTML = type_crime;
-  document.getElementById("items-navigation").innerHTML = navigation;
+  document.getElementById("items-navigation").innerHTML = navigation.join("");
   document.getElementById("navigation").innerHTML += sections.join("");
 
   // Afficher les containers
@@ -129,7 +129,11 @@ function set_instance_active (el) {
   container_focus.classList.add("actif");
 }
 
-function envoyer () {
+function envoyer (ev) {
+
+  // Ne pas envoyer par le formulaire
+  ev.preventDefault();
+
   let donnees = {};
 
   // Extraire les donnees
@@ -138,7 +142,8 @@ function envoyer () {
   // Envoyer au serveur
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) { alert(this.responseText); }
+    // TODO envoyer au bon endroit ...
+    if (this.readyState == 4/* && this.status == 200 */) { alert(this.responseText); }
   };
   xhttp.open("POST", ENDPOINT_API, true);
   xhttp.send(donnees);

@@ -5,11 +5,11 @@
 }
 
 .liste-tab {
-  width: 50%;
-  
-  /* override justify-content: space-between */
-  margin-right: auto;
+  margin: 0 15px;
   overflow: scroll;
+
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .item-instance {
@@ -17,6 +17,7 @@
   padding: 5px 10px;
   margin-left: 20px;
   background-color: rgba(0,0,0,0.1);
+  min-width: 50px;
 }
 
 .item-instance.actif {
@@ -99,6 +100,7 @@
 
 .plus {
   float: right;
+  cursor: pointer;
 }
 
 .container-instance {
@@ -111,4 +113,20 @@
 
 .image_1colonne img {
   max-width: 50%;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: end;
+}
+
+.footer-form > input[type='submit'] {
+  border: none;
+  border-radius: 0;
+
+  padding: 10px;
+  font-size: 1.5em;
+  
+  margin-bottom: 20px;
+  cursor: pointer;
 }
