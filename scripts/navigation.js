@@ -1,19 +1,8 @@
-window.CONFIG = {
-  suspects: {
-    actuel: 1,
-    max: 5
-  },
-  vehicules: {
-    actuel: 1,
-    max: 5
-  },
-  images: {
-    actuel: 1,
-    max: 5
-  }
-}
+ENDPOINT_API = "api.echecaucrime.com/signalement";
 
-window.onload = function () {
+window.onload = init;
+
+function init () {
 
   // Initialisation
   initialiser_instances();
@@ -138,6 +127,21 @@ function set_instance_active (el) {
 
   [].forEach.call(container_focus.parentNode.querySelectorAll(".container-instance"), (container) => { container.classList.remove("actif"); })
   container_focus.classList.add("actif");
+}
+
+function envoyer () {
+  let donnees = {};
+
+  // Extraire les donnees
+  [].forEach.call(document.querySelectorAll("input, textarea"), (el) => { donnees[el.id] = el.value; });
+
+  // Envoyer au serveur
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) { alert(this.responseText); }
+  };
+  xhttp.open("POST", ENDPOINT_API, true);
+  xhttp.send(donnees);
 }
 
 // TODO afficher l'image
