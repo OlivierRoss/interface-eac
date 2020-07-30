@@ -57,6 +57,11 @@ function construire_formulaire () {
   [].forEach.call(document.querySelectorAll(".container-instance"), (container) => {
     container.classList.add("actif");
   });
+
+  // Activer les items
+  [].forEach.call(document.querySelectorAll(".item-instance"), (item) => {
+    item.classList.add("actif");
+  });
 }
 
 function construire_type_crime () {
@@ -106,7 +111,8 @@ function instancier (id_section) {
   nouvel_element = doc.body.getElementsByClassName("container-instance")[0];
 
   // Ajouter le nouvel element a la section
-  document.getElementById(id_section).getElementsByClassName("c-tab__content")[0].appendChild(nouvel_element);
+  let el_section = document.getElementById(id_section);
+  el_section.getElementsByClassName("c-tab__content")[0].appendChild(nouvel_element);
 
   // Ajouter l'item de navigation
   if(section.multiples) {
@@ -114,7 +120,9 @@ function instancier (id_section) {
 
     doc = parser.parseFromString(nouvel_instance_item, "text/html");
     let nouvel_item = doc.body.getElementsByClassName("item-instance")[0];
-    document.getElementById(id_section).getElementsByClassName("liste-tab")[0].appendChild(nouvel_item);
+    el_section.getElementsByClassName("liste-tab")[0].appendChild(nouvel_item);
+
+    set_instance_active(nouvel_item);
   }
 }
 
